@@ -1,0 +1,192 @@
+include ../../_assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+include components/menu.pug
+include components/icon.pug
+include components/breadcrumb.pug
+include components/pugination.pug
+include components/soc.pug
+include components/pic.pug
+include components/img.pug
+include components/btn.pug
+
+include components/ddgroup.pug
+
+mixin arrow()
+	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
+		+icon('arrow-left')
+	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
+		+icon('arrow-right')
+//- /arrow for swiper-slider
+
+mixin ie11()
+	//- modernizer and for ie11
+	 
+	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+mixin addblock()
+	+b.addBlock
+		+e.btn--minus(type="button")
+		input(type="text" value="1")
+		+e.btn--plus(type="button")
+
+mixin catalogItem(i, h, p)
+	+b.catalogItem
+		+pic(`catalogItem-${i}.jpg`, 'bg', 0)
+		h6!= h
+		.small!= p
+		+e.btn.link-modal-js(href="#modal-call" data-title= "Получить расчет" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;выполним расчет." data-btn= "Получить расчет" data-pic= "2") Получить расчет
+
+mixin page-head(data)
+	+b.page-head
+		.container
+			+e.row.row
+				if data.btn
+					.col-auto
+						+e.arrow-back(href="#")
+							+icon('arrow-left')
+				if data.menu
+					+e.col.col-auto
+						+categoryMenu()
+				if data.search
+					.col-sm
+						+b.search-field
+							input(type='text' name='search' placeholder='Поиск по блогу' aria-label='Search through site content')
+							button
+								+icon('search')
+			+e.wrap
+				h1!= data.title
+				if data.text
+					p!= data.text
+				block
+
+mixin page-head-fixed(data)
+	+b.page-head
+		+e.row--fix
+			.container
+				.row
+					if data.btn
+						.col-auto
+							+e.arrow-back(href="#")
+								+icon('arrow-left')
+					if data.menu
+						+e.col.col-auto
+							+categoryMenu()
+					if data.search
+						.col-sm
+							+b.search-field
+								input(type='text' name='search' placeholder='Поиск по блогу' aria-label='Search through site content')
+								button
+									+icon('search')
+		+e.wrap
+			.container
+				h1!= data.title
+				if data.text
+					p!= data.text
+				block
+
+mixin categoryMenu()
+		+b.category-menu.dropdown
+			+e.btn.dropdown__btn
+				+icon('categories-btn')
+				span Категории
+			+b.categories.dropdown__content
+				mixin categoryItem(t, i)
+					+e.item(href="#")&attributes(attributes)
+						span!= t
+						img(src=`img/svg/categories-${i}.svg`, alt="")
+						//- +icon(`categories-${i}`)
+				+categoryItem(`Советы <br> и&nbsp;лайфхаки`, 1).active
+				+categoryItem(`Технические <br> детали`, 2)
+				+categoryItem(`Безопасность <br> и&nbsp;гарантии`, 3)
+				+categoryItem(`Внешний <br> вид`, 4)
+				+categoryItem(`Выбор <br> навеса`, 5)
+				+categoryItem(`Примеры <br> наших работ`, 6)
+			
+mixin infoPanel()
+	+b.info-panel
+		.row
+			block
+
+mixin infoPanelItem(i, t)
+	.col-auto
+		+e.item&attributes(attributes)
+			if i
+				+icon(`${i}`)
+			span!= t
+
+mixin scrollToTop()
+	+b.back-top#back-top
+		a(href="#top")
+			+icon('arrow-up')
+			span Наверх
+
+mixin content(title, ...items)
+	+e.content
+		h4!= title
+		each item in items
+			p!= item
+		.text-end.mt-3
+			a(href="#").btn.btn-primary Кнопка 
+
+mixin blogItem(i, h)
+	+b.blog-item(href="#")
+		+pic(`blog-${i}.jpg`, 'bg', 0)
+		h4!= h
+		+infoPanel()
+			+infoPanelItem(``, `15.09.21`).--btn
+			+infoPanelItem(`eye`, `834`).--views
+			+infoPanelItem(`clock`, `5&nbsp;минут`).--time
+
+mixin content-table()
+	+b.content-table
+		+e.title Содержание
+		ul
+			li
+				a(href="#") Входная группа
+			li
+				a(href="#") Закрытая веранда
+			li
+				a(href="#") Открытая веранда
+			li
+				a(href="#") Навес для автомобиля
+			li
+				a(href="#") Беседка
+			li
+				a(href="#") Игровая зона для детей
+			li
+				a(href="#") Навес для кладовой
+
+
+mixin adv-item(title,caption,btn,img)
+	+b.adv-item.bg-wrap
+		+pic(`adv-item-${img}.jpg`,`bg`,0).picture-bg
+		+e.title!=title
+		+e.caption!=caption
+		+e.btn(href="#")!=btn
+
+mixin adv-item-white(title,caption,btn)
+	+b.adv-item--white
+		if title
+			+e.title!=title
+		+e.caption!=caption
+		if btn
+			+e.btn(href="#")!=btn
+		else
+			+b.social
+				+e.item(href="#" target="_blank")
+					+e.icon-wrap
+						+icon('instagram')
+					span Instagram
+				+e.item(href="#" target="_blank")
+					+e.icon-wrap
+						+icon('youtube')
+					span YouTube
+				+e.item(href="#" target="_blank")
+					+e.icon-wrap
+						+icon('whatsapp')
+					span Whatsapp
+
+mixin agreement()
+	+e.agreement
+		+in-c()&attributes(attributes)
+			+e.SPAN.text.form-check-label Я согласен с условиями #[a(href="#modal-policy").link-modal-js политики конфиденциальности] и предоставляю согласие на обработку #[a(href="#modal-policy").link-modal-js персональных данных] 

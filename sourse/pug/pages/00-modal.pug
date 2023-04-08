@@ -1,0 +1,46 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCategories/_sCategories.pug
+//- include ../blocks/sYouNeedUs/_sYouNeedUs.pug
+//- include ../blocks/sTeam/_sTeam.pug
+//- include ../blocks/sAccess/_sAccess.pug
+//- include ../blocks/sQuestions/_sQuestions.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sCardHorisontal/_sCardHorisontal.pug
+//- include ../blocks/footer-main/_footer-main.pug
+
+block variables
+	- let  mainPage= null 
+	- let  bg= null
+
+block title
+	- let  title= 'Модальные окна'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+		+topLine()
+	.section.container
+		.row
+			mixin btn(id, name)
+				.col-auto.mb-3
+					a.btn.btn-primary.link-modal-js(href=`#${id}`)&attributes(attributes)= name
+			+btn("modal-call", "Вызвать замерщика")(data-title= "Вызвать замерщика" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;договоримся о&nbsp;замере" data-btn= "Отправить" data-pic= "1")
+			+btn("modal-call", "Получить расчет")(data-title= "Получить расчет" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;выполним расчет." data-btn= "Получить расчет" data-pic= "2")
+			+btn("modal-call", "Заказать обратный звонок")(data-title= "Обратный звонок" data-text= "Оставьте свой номер телефона, и&nbsp;мы&nbsp;вам перезвоним в&nbsp;течение 15&nbsp;минут." data-btn= "Заказать обратный звонок" data-pic= "2")
+			+btn("modal-call", "Заказать обратный звонок (хочу навес)")(data-title= "Хочу навес Н1830" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;сообщим детальную информацию по&nbsp;навесу, направим к&nbsp;вам замерщика или поможем оформить заказ онлайн" data-btn= "Заказать обратный звонок" data-pic= "2")
+			+btn("modal-call", "Заказать расчет похожего")(data-title= "Заказать расчет похожего навеса" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;выполним расчет" data-btn= "Заказать расчет" data-pic= "2")
+			+btn("modal-call", "Заказать детальный расчет")(data-title= "Заказать детальный расчет" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;выполним расчет." data-btn= "Заказать расчет" data-pic= "1")
+			+btn("modal-call", "Записаться на экскурсию")(data-title= "Записаться на&nbsp;экскурсию по&nbsp;производству" data-text= "Оставьте свой номер телефона, мы&nbsp;перезвоним в&nbsp;течение 15&nbsp;минут и&nbsp;запишем вас" data-btn= "Запсиаться на&nbsp;экскурсию" data-pic= "1")
+			+btn("modal-call-reviews", "Читать отзыв")
+			+btn("modal-policy", "персональных данных")
+			+btn("modal-callback", "Обратный звонок")(data-desktop-pic= "img/@2x/modal-3.png" data-mobile-pic='img/avatar-1.png')
+			+btn("modal-callback", "Обратный звонок 2")(data-desktop-pic= "img/@2x/modal-4.png" data-mobile-pic='img/avatar-2.png')
+	+footer
+
+
+

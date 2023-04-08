@@ -1,0 +1,25 @@
+mixin sAbout(data)
+	// start sAbout
+	+b.SECTION.sAbout.section#sAbout&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h4 О компании
+				h2 Строим навесы с&nbsp;2019&nbsp;года. Собственное производство. Сертификаты качества.
+			+e.slider-wrapper
+				+arrow
+				+e.slider--js.swiper
+					.swiper-wrapper
+						mixin sAboutSlide(i, p)
+							+e.slide.swiper-slide
+								+e.item(data-fancybox='sAbout' data-src=`img/@2x/sAbout-${i}.png` data-caption=`${p}`)
+									+e.img-wrap.picture-bg
+										+pic(`sAbout-${i}.png`, 'bg')
+									span!= p
+						+sAboutSlide(1, `Сварочный цех`)
+						+sAboutSlide(1, `Сборочный цех`)
+						+sAboutSlide(1, `Сварочный цех`)
+						+sAboutSlide(1, `Сборочный цех`)
+			+e.footer
+				p Производим прочные навесы, выдерживающие нагрузку в&nbsp;суровом климате. Соблюдаем стандарты качества и&nbsp;предоставляем полный сервис под ключ для наших клиентов. С&nbsp;нами легко начать работать&nbsp;&mdash; замер, расчет сметы и 3D&minus;макет навеса мы&nbsp;делаем бесплатно.
+				+e.btn.link-modal-js(href="#modal-call" data-title= "Записаться на&nbsp;экскурсию по&nbsp;производству" data-text= "Оставьте свой номер телефона, мы&nbsp;перезвоним в&nbsp;течение 15&nbsp;минут и&nbsp;запишем вас" data-btn= "Запсиаться на&nbsp;экскурсию" data-pic= "1") Записаться на&nbsp;экскурсию по&nbsp;производству
+	// end sAbout

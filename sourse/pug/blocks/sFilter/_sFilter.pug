@@ -1,0 +1,132 @@
+//- mixin checkbox(text, typ="checkbox", name= typ)
+//- 	+b.LABEL.checkbox
+//- 		+e.INPUT.input(type= typ , name= name)&attributes(attributes)
+//- 		+e.SPAN.lab= text
+
+//- mixin checkbox2(text, typ="checkbox", name= typ)
+//- 	.col-6
+//- 		+b.LABEL.checkbox
+//- 			+e.INPUT.input(type= typ , name= name)&attributes(attributes)
+//- 			+e.SPAN.lab= text
+
+mixin sFilter(data)
+	// start sFilter
+	+b.sFilter&attributes(attributes)
+		.dd-group-js
+			.dd-head-js.d-flex.d-lg-none.justify-content-between.active
+				| Показать фильтры
+				+icon('chevron-down')
+			+e.wrap.dd-content-js
+				+e.title
+					h4 Фильтры
+					a(href="#") Сбросить
+				+e.body
+					+ddGroup()
+						.row
+							.col-md-6.col-lg-12
+								+ddGroupItem('Навесы').active
+									+e.wrap
+										+in-c("checkbox", 'Для машин')
+										+in-c("checkbox", 'К дому')(checked)
+										+in-c("checkbox", 'Для бассейна')
+										+in-c("checkbox", 'Кованые')(checked)
+										+in-c("checkbox", 'Другие типы навесов')
+							.col-md-6.col-lg-12
+								+ddGroupItem('Прочие конструкции').active
+									+e.wrap
+										+in-c("checkbox", 'Комплекты гаражей')
+										+in-c("checkbox", 'Фермы')(checked)
+										+in-c("checkbox", 'Ангары')
+										+in-c("checkbox", 'Гаражи из сэндвич-панелей')(checked)
+										+in-c("checkbox", 'Козырьки')
+							.col-12
+								+ddGroupItem('Длина').active
+									+e.wrap
+										.row
+											.col-6
+													+in-c("checkbox", '1 м')
+											.col-6
+													+in-c("checkbox", '1 м')
+											.col-6
+													+in-c("checkbox", '12 м')(checked)
+											.col-6
+													+in-c("checkbox", '12 м')(checked)
+											.col-6
+													+in-c("checkbox", '17 м')
+											.col-6
+													+in-c("checkbox", '17 м')
+											.col-6
+													+in-c("checkbox", '2 м')(checked)
+											.col-6
+													+in-c("checkbox", '2 м')(checked)
+											.col-6
+													+in-c("checkbox", '4 м')
+											.col-6
+													+in-c("checkbox", '4 м')
+											.col-6
+													+in-c("checkbox", '6 м')
+											.col-6
+													+in-c("checkbox", '6 м')
+											.col-6
+													+in-c("checkbox", '8 м')
+											.col-6
+													+in-c("checkbox", '8 м')
+								+ddGroupItem('Ширина').active
+									+e.wrap
+										.row
+											.col-6
+													+in-c("checkbox", '1 м')
+											.col-6
+													+in-c("checkbox", '1 м')
+											.col-6
+													+in-c("checkbox", '12 м')(checked)
+											.col-6
+													+in-c("checkbox", '12 м')(checked)
+											.col-6
+													+in-c("checkbox", '17 м')
+											.col-6
+													+in-c("checkbox", '17 м')
+											.col-6
+													+in-c("checkbox", '2 м')(checked)
+											.col-6
+													+in-c("checkbox", '2 м')(checked)
+											.col-6
+													+in-c("checkbox", '4 м')
+											.col-6
+													+in-c("checkbox", '4 м')
+											.col-6
+													+in-c("checkbox", '6 м')
+											.col-6
+													+in-c("checkbox", '6 м')
+											.col-6
+													+in-c("checkbox", '8 м')
+											.col-6
+													+in-c("checkbox", '8 м')
+							.col-md-6.col-lg-12
+								+ddGroupItem('Тип навеса').active
+									+e.wrap
+										+in-c("checkbox", 'Ангары')
+										+in-c("checkbox", 'Беседка')(checked)
+										+in-c("checkbox", 'Ангары')
+										+in-c("checkbox", 'Гаражи из сэндвич-панелей')(checked)
+										+in-c("checkbox", 'Кованные навесы')
+							.col-md-6.col-lg-12
+								+ddGroupItem('Материал кровли').active
+									+e.wrap
+										+in-c("checkbox", 'Ангары')
+										+in-c("checkbox", 'Беседка')(checked)
+										+in-c("checkbox", 'Ангары')
+										+in-c("checkbox", 'Гаражи из сэндвич-панелей')(checked)
+										+in-c("checkbox", 'Кованные навесы')
+							.col-md-6.col-lg-12
+								+ddGroupItem('Тип каркаса').active
+									+e.wrap
+										+in-c("checkbox", 'Ангары')
+										+in-c("checkbox", 'Беседка')(checked)
+										+in-c("checkbox", 'Ангары')
+										+in-c("checkbox", 'Гаражи из сэндвич-панелей')(checked)
+										+in-c("checkbox", 'Кованные навесы')
+					+e.btn-wrap
+						+e.btn-tooltip.btn-primary(type="button") Применить
+						+e.btn-tooltip.btn-secondary(type="button") Сбросить
+	// end sFilter
