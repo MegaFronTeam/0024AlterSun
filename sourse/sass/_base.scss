@@ -384,19 +384,19 @@ ul {
 			width: rem(8);
 			height: rem(8);
 			border-radius: 50%;
-			background-color: rgba($color: $body-color, $alpha: 0.5);
+			background-color: #D1C4AE;
 		}
 		&-active {
 			background-color: $white;
 			&::after {
-				background-color: var(--bs-warning);
+				background-color: #DABD8E;
 			}
 		}
 		&:hover {
 			@include media-breakpoint-up(lg) {
 				background-color: $white;
 				&::after {
-					background-color: var(--bs-warning);
+					background-color: #DABD8E;
 				}
 			}
 		}
