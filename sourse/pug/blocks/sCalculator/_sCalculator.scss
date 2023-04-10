@@ -190,6 +190,9 @@
 					color: $white;
 				}
 				.row {
+					@include media-breakpoint-up(lg) {
+						--bs-gutter-y: #{rem(32)};
+					}
 					@include media-breakpoint-up(xxl) {
 						--bs-gutter-x: #{rem(32)};
 					}
@@ -222,7 +225,8 @@
 		}
 		&__btn {
 			@extend .btn, .btn-primary, .btn-lg, .with-shadow;
-			width: 100%;
+			width: auto;
+			max-width: 100%;
 			margin-top: rem(8);
 			margin-bottom: rem(4);
 			@media (max-width: 410px) {
@@ -375,7 +379,7 @@
 			display: flex;
 			@include roww(12.3px, m);
 			.icon {
-				color: $success;
+				color: #D9BC8D;
 				font-size: rem(17);
 				min-width: rem(17);
 			}
@@ -387,6 +391,7 @@
 				@include media-breakpoint-up(xl) {
 					font-size: rem(14);
 					font-weight: 500;
+					line-height: 150%;
 				}
 			}
 		}

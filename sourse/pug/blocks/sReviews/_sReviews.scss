@@ -158,19 +158,23 @@
 			font-weight: 500;
 			font-size: rem(12);
 			line-height: 115%;
-			color: rgba($color: $body-color, $alpha: 0.5);
+			color: rgba(0, 0, 0, 0.7);
+			opacity: 0.5;
+			// color: rgba($color: $body-color, $alpha: 0.5);
 		}
 		p {
 			font-weight: 500;
 			font-size: 16px;
 			line-height: 115%;
 			margin-bottom: rem(10);
+			color: $black;
 		}
 		.small {
 			font-weight: 500;
 			font-size: 11px;
 			line-height: 115%;
-			color: rgba($color: $body-color, $alpha: 0.7);
+			color: rgba(0, 0, 0, 0.7);
+			// color: rgba($color: $body-color, $alpha: 0.7);
 		}
 	}
 }

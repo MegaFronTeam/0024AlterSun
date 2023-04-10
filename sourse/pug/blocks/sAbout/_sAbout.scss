@@ -41,10 +41,10 @@
 			position: absolute;
 			left: 0;
 			bottom: 0;
-			background-color: $light;
+			background-color: #86755B;
 			padding: rem(8) rem(10);
-			border-radius: 0px 10px;
-			color: #000000;
+			// border-radius: 0px 10px;
+			color: $white;
 			opacity: 0;
 			font-weight: 500;
 			font-size: 13px;
@@ -58,10 +58,10 @@
 	}
 	&__img-wrap {
 		@include mt;
-		border-radius: $border-radius-lg;
-		border: 1px solid #e0e0e0;
+		// border-radius: $border-radius-lg;
+		border: 1px solid #A58C64;
 		overflow: hidden;
-		background-color: #e0e0e0;
+		background-color: $info;
 		opacity: 0.2;
 		z-index: -1;
 	}
