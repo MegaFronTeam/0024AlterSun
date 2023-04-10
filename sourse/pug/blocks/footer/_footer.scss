@@ -2,6 +2,7 @@
 	padding-top: rem(24);
 	padding-bottom: rem(21);
 	margin-top: auto;
+	background-color: $light;
 	@include media-breakpoint-up(md) {
 		padding-top: rem(35);
 		padding-bottom: rem(35);
@@ -11,16 +12,16 @@
 		padding-bottom: rem(57);
 	}
 	&__head {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: rem(25);
-		@include media-breakpoint-up(lg) {
-			flex-direction: column;
-			justify-content: flex-start;
-			align-items: flex-start;
-			margin-bottom: 0;
-		}
+		// display: flex;
+		// justify-content: space-between;
+		// align-items: center;
+		margin-bottom: rem(24);
+		// @include media-breakpoint-up(lg) {
+		// flex-direction: column;
+		// justify-content: flex-start;
+		// align-items: flex-start;
+		// margin-bottom: 0;
+		// }
 	}
 	&__col {
 		padding-top: rem(36);
@@ -39,14 +40,15 @@
 	}
 	.logo {
 		display: inline-block;
-		@include media-breakpoint-up(lg) {
-			margin-bottom: rem(32);
-		}
-		@include media-breakpoint-down(lg) {
-			&:not(:hover) {
-				color: #000;
-			}
-		}
+		// @include media-breakpoint-up(lg) {
+		// 	margin-bottom: rem(32);
+		// }
+		// @include media-breakpoint-down(lg) {
+		// 	&:not(:hover) {
+		// 		color: #000;
+		// 	}
+		// }
+		
 	}
 	.label {
 		background-color: $secondary;
@@ -70,7 +72,7 @@
 	}
 	h6 {
 		margin-bottom: rem(20);
-		color: $dark;
+		color: $secondary;
 	}
 	ul {
 		list-style-type: none;

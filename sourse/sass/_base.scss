@@ -316,7 +316,7 @@ ul {
 	height: var(--swiperArrowSize);
 	border-radius: 50%;
 	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
+	border: 1px solid var(--swiperBorderColorDef);
 	color: var(--swiperColorDef);
 	@include bgs;
 	z-index: 300;
@@ -325,7 +325,7 @@ ul {
 	background-image: none;
 	margin: 0;
 	@include a-cent(y);
-	filter: drop-shadow(0px 10px 13px rgba(0, 0, 0, 0.09));
+	// filter: drop-shadow(0px 10px 13px rgba(0, 0, 0, 0.09));
 	@include mt;
 	user-select: none;
 
@@ -548,7 +548,7 @@ iframe {
 			position: absolute;
 			font-size: rem(16);
 			fill: none;
-			stroke: #DABD8E;
+			stroke: #dabd8e;
 			stroke-width: 3px;
 			top: rem(8);
 			left: rem(3);
@@ -687,25 +687,23 @@ h4 {
 	}
 }
 
-
-
-.grecaptcha-badge{
+.grecaptcha-badge {
 	opacity: 0 !important;
 	visibility: hidden !important;
 	pointer-events: none !important;
 }
 
-.page-404{
+.page-404 {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	.main-wrapper{
+	.main-wrapper {
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 	}
 }
-.s404{
+.s404 {
 	margin-top: calc(#{rem(60)} + #{rem(70)});
 	flex-grow: 1;
 	display: flex;
@@ -721,37 +719,35 @@ h4 {
 		min-height: 700px;
 	}
 	min-height: 440px;
-	&__title{
+	&__title {
 		font-weight: 700;
-		@include rfs(295.121px) ;
-		line-height: 100%; 
-		color: #35455C;
+		@include rfs(295.121px);
+		line-height: 100%;
+		color: #35455c;
 		// text-shadow: ;
-		svg{
+		svg {
 			@include a-cent1;
-			max-width: calc(140% );
+			max-width: calc(140%);
 			// z-index: 1;
 			z-index: -1;
 		}
 		position: relative;
 	}
-	&__inner{
-		
-		&--back{
+	&__inner {
+		&--back {
 			z-index: -2;
 			@include a-cent1;
 			margin-top: 4px;
 			margin-left: 4px;
 			color: $primary;
 		}
-		&--front{
+		&--front {
 			z-index: 3;
 
 			position: relative;
 		}
-
 	}
-	&__text{
+	&__text {
 		font-size: rem(18);
 		font-weight: bold;
 		margin-bottom: rem(40);
@@ -773,11 +769,12 @@ h4 {
 			--color: #fff;
 		}
 	}
-	.logo {
-		&:not(:hover) {
-			@include media-breakpoint-down(lg) {
-				color: #fff;
-			}
-		}
-	}
+	// .logo {
+
+	// &:not(:hover) {
+	// 	@include media-breakpoint-down(lg) {
+	// 		color: #fff;
+	// 	}
+	// }
+	// }
 }
