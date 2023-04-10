@@ -14,7 +14,7 @@
 		margin-bottom: rem(8);
 		flex-grow: 1;
 		width: 100%;
-		border-radius: rem(12);
+		// border-radius: rem(12);
 	}
 	&__slider-wrap {
 		position: relative;
@@ -38,8 +38,8 @@
 			min-height: 100%;
 			@include block(800, 478);
 			img {
-				border-radius: rem(8);
-				border: 1px solid #e0e0e0;
+				// border-radius: rem(8);
+				border: 1px solid $info;
 				position: absolute;
 				top: 0;
 				left: 0;
@@ -50,7 +50,7 @@
 			picture {
 				@include block(193, 99);
 				img {
-					border-radius: rem(8);
+					// border-radius: rem(8);
 					border: 1px solid #e0e0e0;
 					position: absolute;
 					top: 0;

@@ -22,8 +22,9 @@
 		@include mt;
 		--sPT: #{rem(24)};
 		--sPB: #{rem(24)};
-		border-radius: rem(20);
-		box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.09);
+		// border-radius: rem(20);
+		// filter: drop-shadow(0px 0px 37px rgba(0, 0, 0, 0.15));
+		box-shadow: 0px 0px 37px rgba(0, 0, 0, 0.15);
 		&__container {
 			--bs-gutter-x: #{rem(24)};
 			@include media-breakpoint-up(md) {
@@ -31,6 +32,7 @@
 			}
 		}
 		&:hover {
+			// filter: none;
 			box-shadow: none;
 		}
 		h4 {
