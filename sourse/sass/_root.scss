@@ -17,13 +17,13 @@
 
 	--swiperArrowSize: #{rem(32)};
 	--swiperArrowPosition: calc(-1 * var(--swiperArrowSize) / 4);
-	--swiperBorderColorDef: #A58C64;
-	--swiperColorDef: #A58C64;
+	--swiperBorderColorDef: var(--bs-primary);
+	--swiperColorDef: var(--bs-primary);
 	--swiperBgDef: var(--bs-white);
 
-	--swiperBorderColorDefHover: #A58C64;
+	--swiperBorderColorDefHover: var(--bs-primary);
 	--swiperColorDefHover: var(--bs-white);
-	--swiperBgDefHover: #A58C64;
+	--swiperBgDefHover: var(--bs-primary);
 	@media (min-width: 440px) {
 		--swiperArrowSize: #{rem(48)};
 	}

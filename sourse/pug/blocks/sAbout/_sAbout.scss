@@ -59,7 +59,7 @@
 	&__img-wrap {
 		@include mt;
 		// border-radius: $border-radius-lg;
-		border: 1px solid #A58C64;
+		border: 1px solid $primary;
 		overflow: hidden;
 		background-color: $info;
 		opacity: 0.2;

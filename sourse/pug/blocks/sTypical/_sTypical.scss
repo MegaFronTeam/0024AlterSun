@@ -155,7 +155,7 @@
 		picture {
 			@include block(280, 220);
 			width: 100%;
-			border: 0.62963px solid #A58C64;
+			border: 0.62963px solid $primary;
 			// border-radius: 12.5926px;
 			overflow: hidden;
 			margin-bottom: rem(20);
