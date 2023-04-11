@@ -384,19 +384,19 @@ ul {
 			width: rem(8);
 			height: rem(8);
 			border-radius: 50%;
-			background-color: #D1C4AE;
+			background-color: #d1c4ae;
 		}
 		&-active {
 			background-color: $white;
 			&::after {
-				background-color: #DABD8E;
+				background-color: #dabd8e;
 			}
 		}
 		&:hover {
 			@include media-breakpoint-up(lg) {
 				background-color: $white;
 				&::after {
-					background-color: #DABD8E;
+					background-color: #dabd8e;
 				}
 			}
 		}
@@ -588,8 +588,43 @@ iframe {
 	}
 }
 
+.btn-gradient {
+	position: relative;
+	border: none !important;
+	z-index: 2;
+	overflow: hidden;
+	&::before {
+		content: "";
+		@include mt;
+		pointer-events: none;
+		position: absolute;
+		width: 200%;
+		height: 100%;
+		right: 0;
+		top: 0;
+		background-image: linear-gradient(
+			141deg,
+			rgba(217, 188, 141, 1) 0%,
+			rgba(164, 139, 99, 1) 50%,
+			rgba(217, 188, 141, 1) 100%
+		);
+		background-size: 100% 100%;
+		background-position: left top;
+		z-index: -1;
+	}
+	&:hover,
+	&:active {
+		&::before {
+			transform: translateX(50%);
+		}
+	}
+}
+
 .btn-primary {
-	color: $secondary;
+	--bs-btn-color: #ffffff;
+	--bs-btn-hover-color: #ffffff;
+	--bs-btn-active-color: #ffffff;
+
 	&.with-shadow {
 		position: relative;
 		border: 1px solid transparent;

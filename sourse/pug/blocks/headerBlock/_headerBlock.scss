@@ -106,7 +106,7 @@
 		}
 	}
 	&__btn {
-		@extend .btn, .btn-lg, .btn-primary, .with-shadow;
+		@extend .btn, .btn-lg, .btn-primary;
 		display: none;
 		margin-bottom: rem(30);
 		width: rem(241);
@@ -247,13 +247,13 @@
 			padding: rem(45) rem(42);
 		}
 		@include media-breakpoint-up(lg) {
-			max-width: rem(422);
+			max-width: 422px;
 		}
 		&::after {
 			content: "";
 			position: absolute;
 			left: 0;
-			top: 20%;
+			top: 15%;
 			width: 100%;
 			height: 100%;
 			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='422' height='435' viewBox='0 0 422 435' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M422 532H1.90735e-06V208.01L422 -1.04308e-05V532Z' fill='url(%23paint0_linear_2513_950)'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_2513_950' x1='211' y1='109.546' x2='211' y2='532.11' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FBF8F4'/%3e%3cstop offset='1' stop-color='%23FBF8F4' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
@@ -261,6 +261,9 @@
 			background-size: 100% 100%;
 			background-position: top;
 			z-index: -1;
+			@include media-breakpoint-up(lg) {
+				top: 13%;
+			}
 		}
 
 		p {
@@ -292,11 +295,8 @@
 			line-height: 100%;
 			color: $white;
 			// color: rgba($color: $white, $alpha: 0.5);
-			margin-bottom: rem(9);
-			@include media-breakpoint-down(lg) {
-				// font-size: rem(14);
-				margin-bottom: rem(15);
-			}
+			margin-bottom: rem(15);
+			
 		}
 		.row {
 			--bs-gutter-x: #{rem(10)};
@@ -320,7 +320,7 @@
 			}
 		}
 		&__btn {
-			@extend .btn, .btn-lg, .btn-primary, .with-shadow;
+			@extend .btn, .btn-lg, .btn-primary;
 			width: 100%;
 
 			@include media-breakpoint-down(lg) {

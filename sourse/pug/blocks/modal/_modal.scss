@@ -175,7 +175,7 @@
 			}
 		}
 		&__btn {
-			@extend .btn, .btn-primary, .btn-lg, .with-shadow;
+			@extend .btn, .btn-primary, .btn-lg;
 			width: 100%;
 			margin-top: rem(4);
 			margin-bottom: rem(4);

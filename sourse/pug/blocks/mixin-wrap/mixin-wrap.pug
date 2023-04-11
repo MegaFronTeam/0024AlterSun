@@ -30,11 +30,18 @@ mixin addblock()
 		+e.btn--plus(type="button")
 
 mixin catalogItem(i, h, p)
-	+b.catalogItem
+	+b.catalogItem.link-modal-js(href="#modal-call" data-title= "Получить расчет" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;выполним расчет." data-btn= "Получить расчет" data-pic= "2")
 		+pic(`catalogItem-${i}.jpg`, 'bg', 0)
 		h6!= h
 		.small!= p
-		+e.btn.link-modal-js(href="#modal-call" data-title= "Получить расчет" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;выполним расчет." data-btn= "Получить расчет" data-pic= "2") Получить расчет
+		+e.btn.btn-gradient Получить расчет
+
+//- mixin catalogItem(i, h, p)
+//- 	+b.catalogItem
+//- 		+pic(`catalogItem-${i}.jpg`, 'bg', 0)
+//- 		h6!= h
+//- 		.small!= p
+//- 		+e.btn.btn-gradient.link-modal-js(href="#modal-call" data-title= "Получить расчет" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;выполним расчет." data-btn= "Получить расчет" data-pic= "2") Получить расчет
 
 mixin page-head(data)
 	+b.page-head

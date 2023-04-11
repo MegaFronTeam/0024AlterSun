@@ -18,6 +18,7 @@ mixin sCalculator(data)
 								+input('Высота, мм', 'number')
 							.col-12
 								+input('Материал кровли', 'select')
+									
 						+e.slider-wrapper
 							span Форма крыши
 							+e.slider--js.swiper
@@ -82,7 +83,7 @@ mixin sCalculator(data)
 							.col-sm-6
 								+input('Ваш номер телефона', 'tel')
 							.col-12.d-flex.justify-content-center
-								+e.btn.link-modal-js(href="#modal-call" data-title= "Заказать детальный расчет" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;выполним расчет." data-btn= "Заказать расчет" data-pic= "1") Получить точный расчет <br> за&nbsp;15&nbsp;минут
+								+e.btn.btn-gradient.link-modal-js(href="#modal-call" data-title= "Заказать детальный расчет" data-text= "Оставьте свой номер телефона, мы&nbsp;вам перезвоним и&nbsp;выполним расчет." data-btn= "Заказать расчет" data-pic= "1") Получить точный расчет <br> за&nbsp;15&nbsp;минут
 							.col-12
 								+e.footer 
 									.row

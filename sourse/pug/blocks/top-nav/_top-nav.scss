@@ -130,7 +130,7 @@
 		}
 	}
 	&__btn {
-		@extend .btn, .btn-primary, .with-shadow;
+		@extend .btn, .btn-primary;
 		width: 100%;
 	}
 	&__list {
