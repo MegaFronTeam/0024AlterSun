@@ -40,17 +40,19 @@
 				// &:hover {
 				// 	background-color: lighten($primary, 10%);
 				// }
-				background-color: #FFC23B;
-				color: #323C49;
+				background-color: #86755B;
+				color: $light;
 				&:hover {
+					color: #86755B;
 					background-color: lighten($light, 10%);
 				}
 			}
 			&--measuring {
-				background-color: $secondary;
-				color: $primary;
+				background-color: #86755B;
+				color: $light;
 				&:hover {
-					background-color: lighten($secondary, 10%);
+					color: #86755B;
+					background-color: lighten($light, 10%);
 				}
 			}
 		}
