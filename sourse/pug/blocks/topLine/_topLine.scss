@@ -22,7 +22,7 @@
 			--bs-gutter-x: #{rem(32)};
 		}
 		@include media-breakpoint-up(lg) {
-			--bs-gutter-x: #{rem(55)};
+			--bs-gutter-x: #{rem(40)};
 		}
 		.row {
 			align-items: center;
@@ -211,26 +211,34 @@
 	@include roww(5px, m);
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	// justify-content: flex-end;
 	span {
+		display: inline-block;
 		&:first-child {
-			display: inline-flex;
-			align-items: center;
-			justify-content: center;
-			width: rem(54);
-			height: rem(14);
 			font-weight: 500;
 			font-size: rem(10);
 			line-height: 100%;
-			// padding-bottom: 1px;
-			color: $white;
-			border-radius: 3px;
-			background-color: $success;
+			color: $success;
 		}
+		// &:first-child {
+		// 	display: inline-flex;
+		// 	align-items: center;
+		// 	justify-content: center;
+		// 	width: rem(54);
+		// 	height: rem(14);
+		// 	font-weight: 500;
+		// 	font-size: rem(10);
+		// 	line-height: 100%;
+		// 	// padding-bottom: 1px;
+		// 	color: $white;
+		// 	border-radius: 3px;
+		// 	background-color: $success;
+		// }
 		&:last-child {
+			font-weight: 400;
 			font-size: rem(12);
-			line-height: calc(14 / 12);
-			color: #000000;
+			line-height: 100%;
+			color: $black;
 		}
 	}
 }
