@@ -94,13 +94,18 @@
 	li {
 		line-height: 1.15em;
 		&:not(:last-child) {
-			margin-bottom: rem(10);
+			margin-bottom: rem(6);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(10);
+
+			}
 		}
 		a {
-			font-size: rem(11);
-			@include media-breakpoint-up(md) {
-				font-size: rem(12);
-			}
+			font-size: rem(12);
+			// font-size: rem(11);
+			// @include media-breakpoint-up(md) {
+			// 	font-size: rem(12);
+			// }
 			&:not(:hover) {
 				color: $black;
 			}
@@ -110,6 +115,9 @@
 		// position: absolute;
 		@include media-breakpoint-up(lg) {
 			// margin-top: rem(-113);
+			p {
+				max-width: 65em;
+			}
 		}
 		span {
 			font-size: rem(12);

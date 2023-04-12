@@ -336,7 +336,7 @@
 		}
 		&:hover {
 			.icon {
-				box-shadow: 0 0 13px rgba(0,0,0,.09);
+				box-shadow: 0 0 13px rgba(0, 0, 0, 0.09);
 				background-color: $light;
 				stroke: $secondary;
 			}
@@ -347,7 +347,7 @@
 		stroke: $white;
 		width: rem(50);
 		height: rem(50);
-		background-color: #D1C4AE;
+		background-color: #d1c4ae;
 		font-size: rem(12);
 		stroke-width: 2px;
 		padding: rem(18);
