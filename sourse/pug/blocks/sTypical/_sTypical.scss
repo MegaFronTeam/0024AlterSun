@@ -55,9 +55,9 @@
 			height: rem(32);
 			width: 100%;
 			box-shadow: none !important;
-			border-radius: 10px;
+			border-radius: 7px;
 			padding: 6.5px;
-			font-weight: 400;
+			font-weight: 500;
 			font-size: rem(12);
 			line-height: 115%;
 			@include media-breakpoint-up(md) {
@@ -65,6 +65,7 @@
 			}
 			@include media-breakpoint-up(xl) {
 				height: rem(40);
+				font-size: rem(14);
 			}
 			span {
 				white-space: nowrap;
@@ -87,10 +88,18 @@
 		input.btn-check {
 			&:not(:checked) + label.btn {
 				@extend .btn-info;
+				--bs-btn-color: #424242;
+				--bs-btn-bg: #F4EEE4;
+				// --bs-btn-border-color: #F4EEE4;
+				--bs-btn-hover-color: #424242;
+				--bs-btn-active-color: #424242;
+				--bs-btn-disabled-color: #424242;
+				--bs-btn-font-weight: 500;
+				border: none;
 			}
 			&:checked {
 				+ label.btn {
-					@extend .btn-primary;
+					@extend .btn-primary, .btn-gradient;
 				}
 			}
 		}

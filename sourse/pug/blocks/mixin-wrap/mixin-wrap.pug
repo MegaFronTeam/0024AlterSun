@@ -200,3 +200,9 @@ mixin agreement()
 		else
 			+in-c()&attributes(attributes)
 				+e.SPAN.text.form-check-label Я согласен с условиями #[a(href="#modal-policy").link-modal-js политики конфиденциальности] и предоставляю согласие на обработку #[a(href="#modal-policy").link-modal-js персональных данных] 
+
+
+mixin schedule(t)
+	+b.schedule&attributes(attributes)
+		span!= t
+		span Пн&ndash;Вс &bull; 9:00&ndash;21:00

@@ -8,9 +8,10 @@ mixin topLine()
 						//- +icon('logo-top')
 						+img('img/logo.png')
 				.col-auto
-					+b.schedule
-						span открыто
-						span Пн&ndash;Вс &bull; 9:00&ndash;21:00
+					+schedule(`открыто`)
+					//- +b.schedule
+					//- 	span.text-success открыто
+					//- 	span Пн&ndash;Вс &bull; 9:00&ndash;21:00
 					//- .row
 					//- 	+e.col.col-auto
 					//- 		+b.locaton-dropdown.dropdown
