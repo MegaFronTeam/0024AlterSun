@@ -314,7 +314,7 @@ $border-color: $gray-300 !default;
 // scss-docs-end border-variables
 
 // scss-docs-start border-radius-variables
-$border-radius: rem(8) !default;
+$border-radius: 7px !default;
 $border-radius-sm: .2rem !default;
 $border-radius-lg: rem(16) !default;
 $border-radius-pill: 50rem !default;
@@ -671,7 +671,7 @@ $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: $input-btn-focus-box-shadow !default;
 
-$input-placeholder-color: rgba($color: $body-color, $alpha: 0.5) !default;
+$input-placeholder-color: rgba($color: $black, $alpha: 0.5) !default;
 $input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;

@@ -336,16 +336,18 @@
 		}
 		&:hover {
 			.icon {
-				box-shadow: 1px 3px 16px 0px #0000003b;
+				box-shadow: 0 0 13px rgba(0,0,0,.09);
+				background-color: $light;
+				stroke: $secondary;
 			}
 		}
 	}
 	.icon {
 		@include mt;
-		stroke: $secondary;
+		stroke: $white;
 		width: rem(50);
 		height: rem(50);
-		background-color: $info;
+		background-color: #D1C4AE;
 		font-size: rem(12);
 		stroke-width: 2px;
 		padding: rem(18);

@@ -6,6 +6,7 @@
 		--sPT: #{rem(80)};
 		--sPB: #{rem(90)};
 	}
+	color: #000;
 	&__col-map {
 		// order: 2;
 		@include media-breakpoint-up(lg) {
@@ -60,18 +61,18 @@
 			width: 100% !important;
 			height: 100% !important;
 		}
-		&::after {
-			position: absolute;
-			content: "";
-			background: #f2f6fc;
-			filter: blur(321px);
-			display: block;
-			width: rem(815);
-			height: rem(815);
-			top: -50%;
-			left: -50%;
-			z-index: -7;
-		}
+		// &::after {
+		// 	position: absolute;
+		// 	content: "";
+		// 	background: #f2f6fc;
+		// 	filter: blur(321px);
+		// 	display: block;
+		// 	width: rem(815);
+		// 	height: rem(815);
+		// 	top: -50%;
+		// 	left: -50%;
+		// 	z-index: -7;
+		// }
 		@include media-breakpoint-down(lg) {
 			margin-bottom: 40px;
 		}
@@ -145,7 +146,7 @@
 			margin-bottom: rem(8);
 		}
 		&:hover {
-			box-shadow: 0 0 1.25rem rgb(0 0 0 / 15%);
+			box-shadow: 0 0 13px rgba(0, 0, 0, 0.09);
 		}
 	}
 	&__phone-number {
@@ -242,8 +243,8 @@
 			}
 		}
 		&__input {
-			border: 1px solid $info;
-			border-radius: 8px;
+			border: 1px solid $primary;
+			// border-radius: 7px;
 		}
 		textarea {
 			min-height: rem(112);
@@ -263,8 +264,12 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: flex-start;
-		margin-left: 0; 
+		margin-left: 0;
 		margin-right: 0;
+		margin-top: rem(5);
+		& > * {
+			margin-top: rem(10);
+		}
 	}
 	&--3 {
 		.section-title {

@@ -1018,7 +1018,7 @@
 										</label>
 									</div>
 									<!-- +e.input-wrap-->
-									<button class="btn btn btn-primary" type="submit">Получить консультацию</button>
+									<button class="btn btn btn-primary btn-lg btn-gradient" type="submit">Получить консультацию</button>
 									<div class="form-wrap__agreement">
 										<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox" checked="checked" required="required"/><span class="custom-input__text form-check-label">Я согласен с условиями <a class="link-modal-js" href="#modal-policy">политики конфиденциальности</a> и предоставляю согласие на обработку <a class="link-modal-js" href="#modal-policy">персональных данных</a> </span>
 										</label>
@@ -1034,37 +1034,61 @@
 				<footer class="footer">
 					<div class="container">
 						<div class="row">
-							<div class="col-lg-3">
-								<div class="footer__head">
-									<a class="logo" href="/"><img src="img/logo.png" alt="" loading="lazy"/>
-									</a>
+							<div class="footer__col-main col-lg-9">
+								<div class="row">
+									<div class="col-lg-4 col-xl-3">
+										<div class="footer__head">
+											<a class="logo" href="/"><img src="img/logo.png" alt="" loading="lazy"/>
+											</a>
+										</div>
+										<a class="footer__btn btn btn-primary btn-sm btn-gradient link-modal-js" href="#modal-call" data-title="Вызвать замерщика" data-text="Оставьте свой номер телефона, мы&amp;nbsp;вам перезвоним и&amp;nbsp;договоримся о&amp;nbsp;замере" data-btn="Отправить" data-pic="1">Вызвать замерщика 
+										</a>
+									</div>
+									<div class="col-6 col-sm-4 col-xl-3 ml-lg-auto">
+										<h6>Компания</h6>
+										<ul>
+											<li><a href="#">Калькулятор</a></li>
+											<li><a href="#">Портфолио</a></li>
+											<li><a href="#">Отзывы</a></li>
+											<li><a href="#">Блог</a></li>
+										</ul>
+									</div>
+									<div class="col-6 col-sm-4 col-xl-3">
+										<h6>Навесы</h6>
+										<ul>
+											<li><a href="#">Для авто</a></li>
+											<li><a href="#">Для парковки</a></li>
+											<li><a href="#">К дому</a></li>
+											<li><a href="#">Беседка</a></li>
+											<li><a href="#">Для дачи</a></li>
+											<li><a href="#">Кольцо и козырек</a></li>
+											<li><a href="#">Для бассейна</a></li>
+											<li><a href="#">Ангар</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-4 d-lg-none">
+										<h6>Производим также</h6>
+										<ul>
+											<li><a href="#">Бетонные площадки</a></li>
+											<li><a href="#">Заезды на участок</a></li>
+											<li><a href="#">Мощение</a></li>
+											<li><a href="#">Ворота откатные и распашные</a></li>
+											<li><a href="#">Заборы и ограждения</a></li>
+											<li><a href="#">Кованые изделия</a></li>
+											<li><a href="#">Крыльцо</a></li>
+											<li><a href="#">Лестница в дом</a></li>
+											<li><a href="#">Лестница на улице</a></li>
+											<li><a href="#">Ангары</a></li>
+											<li><a href="#">Изготовление металлоконструкций</a></li>
+											<li><a href="#">Беседки </a></li>
+										</ul>
+									</div>
 								</div>
-								<a class="footer__btn btn btn-primary btn-sm link-modal-js" href="#modal-call" data-title="Вызвать замерщика" data-text="Оставьте свой номер телефона, мы&amp;nbsp;вам перезвоним и&amp;nbsp;договоримся о&amp;nbsp;замере" data-btn="Отправить" data-pic="1">Вызвать замерщика 
-								</a>
+								<div class="footer__content"><span>© 2022</span><a href="#">Политика конфиденцильности</a>
+									<p>Данный сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой, которая определяется положениями статьи 437 (2) Гражданского кодекса РФ. Для получения подробной информации о&nbsp;наличии и&nbsp;стоимости указанных товаров и&nbsp;услуг, обращайтесь к&nbsp;нашим менеджерам или укажите телефон, чтобы мы&nbsp;перезвонили вам.</p>
+								</div>
 							</div>
-							<div class="col-6 col-md-4 col-lg-2 ml-lg-auto">
-								<h6>Компания</h6>
-								<ul>
-									<li><a href="#">Калькулятор</a></li>
-									<li><a href="#">Портфолио</a></li>
-									<li><a href="#">Отзывы</a></li>
-									<li><a href="#">Блог</a></li>
-								</ul>
-							</div>
-							<div class="col-6 col-md-4 col-lg-2">
-								<h6>Навесы</h6>
-								<ul>
-									<li><a href="#">Для авто</a></li>
-									<li><a href="#">Для парковки</a></li>
-									<li><a href="#">К дому</a></li>
-									<li><a href="#">Беседка</a></li>
-									<li><a href="#">Для дачи</a></li>
-									<li><a href="#">Кольцо и козырек</a></li>
-									<li><a href="#">Для бассейна</a></li>
-									<li><a href="#">Ангар</a></li>
-								</ul>
-							</div>
-							<div class="footer__col col-md-4 col-lg-3">
+							<div class="col-lg-3 d-none d-lg-block">
 								<h6>Производим также</h6>
 								<ul>
 									<li><a href="#">Бетонные площадки</a></li>
@@ -1080,11 +1104,6 @@
 									<li><a href="#">Изготовление металлоконструкций</a></li>
 									<li><a href="#">Беседки </a></li>
 								</ul>
-							</div>
-							<div class="col-lg-8">
-								<div class="footer__content"><span>© 2022</span><a href="#">Политика конфиденцильности</a>
-									<p>Данный сайт носит информационный характер и&nbsp;не&nbsp;является публичной офертой, которая определяется положениями статьи 437 (2) Гражданского кодекса РФ. Для получения подробной информации о&nbsp;наличии и&nbsp;стоимости указанных товаров и&nbsp;услуг, обращайтесь к&nbsp;нашим менеджерам или укажите телефон, чтобы мы&nbsp;перезвонили вам. </p>
-								</div>
 							</div>
 						</div>
 					</div>
