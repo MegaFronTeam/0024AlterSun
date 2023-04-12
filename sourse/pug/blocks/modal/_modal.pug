@@ -11,7 +11,7 @@ mixin modal()
 					p.modal-text-js
 				+input("Ваше Имя")(required)
 				+input("+7 ___ ___ __ __", 'tel')(required)
-				+e.BUTTON.btn.btn(type="submit")
+				+e.BUTTON.btn.btn.btn-gradient(type="submit")
 				+agreement()(checked required)
 				//- +e.agreement Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку #[a(href="#modal-policy").link-modal-js персональных данных] 
 			+e.img-wrap.bg-wrap
@@ -67,7 +67,7 @@ mixin modal()
 								p Оставьте свой номер телефона и&nbsp;мы&nbsp;вам перезвоним в&nbsp;течение 15&nbsp;минут
 							//- +input("Ваше Имя")(required)
 							+input("Ваш телефон", 'tel')(required)
-							+e.BUTTON.btn.btn.btn-primary(type="submit") Запросить обратный звонок
+							+e.BUTTON.btn.btn.btn-primary.btn-gradient(type="submit") Запросить обратный звонок
 							+agreement()(checked required)
 							//- +e.agreement Отправляя заявку, вы&nbsp;даете свое согласие на&nbsp;обработку #[a(href="#modal-policy").link-modal-js персональных данных] 
 					.col-lg-6.d-none.d-lg-block

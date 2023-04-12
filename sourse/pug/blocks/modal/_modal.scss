@@ -37,15 +37,16 @@
 			// color: #35455c;
 			right: 10px;
 			top: 10px;
-			color: #D3D5D8;
-			@include media-breakpoint-up(lg) {
+			color: $primary;
+			// color: #D3D5D8;
+			@include media-breakpoint-up(md) {
 				// color: $secondary;
 				right: -8px;
 				top: -8px;
-				--carousel-button-bg: #{$primary};
-				color: #35455c;
+				--carousel-button-bg: #{$light};
+				color: $secondary;
 				&:hover {
-					--carousel-button-bg: #{$secondary};
+					--carousel-button-bg: #{$primary};
 					color: #{$white};
 				}
 			}
