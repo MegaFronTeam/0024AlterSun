@@ -41,7 +41,7 @@
 			position: absolute;
 			left: 0;
 			bottom: 0;
-			background-color: #86755B;
+			background-color: #86755b;
 			padding: rem(8) rem(10);
 			// border-radius: 0px 10px;
 			color: $white;
@@ -91,12 +91,13 @@
 		}
 	}
 	&__btn {
-		@extend .btn, .btn-outline-secondary;
+		@extend .btn;
 		width: rem(450);
 		max-width: 100%;
 		line-height: 145%;
 		// padding: rem(7.5) rem(30);
-		&:focus, &:focus:active {
+		&:focus,
+		&:focus:active {
 			box-shadow: none;
 		}
 	}

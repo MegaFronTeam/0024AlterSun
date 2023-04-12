@@ -813,3 +813,41 @@ h4 {
 	// }
 	// }
 }
+
+.gradient-border {
+	--border-width: 2px;
+	--border-radius: 7px;
+	--color-1: #A48B63;
+	--color-2: #D9BC8D;
+	color: $secondary;
+	position: relative;
+	background: linear-gradient(141.69deg, #A48B63 0%, #D9BC8D 100%), linear-gradient(141.69deg, #A48B63 0%, #D9BC8D 100%);
+	background-position: var(--border-radius) 0, var(--border-radius) 100%;
+	background-repeat: no-repeat;
+	background-size: calc(100% - var(--border-radius) - var(--border-radius)) var(--border-width);
+	border-radius: var(--border-radius);
+	border: none;
+	&:after,
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		width: calc(var(--border-radius) + 3px);
+		top: 0;
+		bottom: 0;
+	}
+	&:before {
+		left: 0;
+		border: var(--border-width) solid var(--color-1);
+		border-top-left-radius: var(--border-radius);
+		border-bottom-left-radius: var(--border-radius);
+		border-right-color: transparent;
+	}
+	&:after {
+		right: 0;
+		border: var(--border-width) solid var(--color-2);
+		border-top-right-radius: var(--border-radius);
+		border-bottom-right-radius: var(--border-radius);
+		border-left-color: transparent;
+	}
+}

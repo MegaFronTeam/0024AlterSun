@@ -111,6 +111,7 @@
 		margin-bottom: rem(30);
 		width: rem(241);
 		max-width: 100%;
+		color: $white;
 		@include media-breakpoint-up(lg) {
 			display: inline-block;
 		}

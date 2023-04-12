@@ -38,7 +38,7 @@
 		height: auto;
 	}
 	&__btn {
-		@extend .btn, .btn-outline-secondary;
+		@extend .btn;
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
