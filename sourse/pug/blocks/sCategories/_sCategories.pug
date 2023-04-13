@@ -1,0 +1,17 @@
+mixin sCategories(img, sub, heading)
+	// start sCategories
+	+b.sCategories.section&attributes(attributes)
+		.container
+			+b.section-title
+				h4!=sub
+				h2!= heading
+			+e.row.row
+				.col
+					+img(`img/sCategories-${img}.jpg`)
+				.col-lg-auto
+					+e.btn-wrap
+						+e.btn-more(href="#")
+							span Подробнее
+							.icon-wrap
+								+icon('arrow-right')
+	// end sCategories

@@ -1,0 +1,70 @@
+// start .sCategories
+.sCategories {
+	--sPT: 0;
+	--sPB: #{rem(57)};
+	--sTPB: #{rem(40)};
+	@include media-breakpoint-up(md) {
+		--sPB: #{rem(114)};
+	}
+	.section-title {
+		h2 {
+			max-width: 19.5em;
+		}
+	}
+	&__row {
+		--bs-gutter-y: var(--sTPB);
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	&__btn-wrap {
+		display: flex;
+		height: 100%;
+		align-items: flex-end;
+	}
+	&__btn-more {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		font-weight: 700;
+		font-size: rem(16);
+		line-height: 145%;
+		margin-left: auto;
+		&:hover {
+			.icon-wrap {
+				background-color: var(--swiperBgDefHover);
+				border-color: var(--swiperBorderColorDefHover);
+				color: var(--swiperColorDefHover);
+			}
+		}
+		.icon-wrap {
+			@extend .swiper-button-hand;
+			--swiperArrowSize: #{rem(48)};
+			position: relative;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			margin-left: rem(27);
+			flex-shrink: 1;
+			.icon {
+				font-size: rem(15);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
+} // end.sCategories
