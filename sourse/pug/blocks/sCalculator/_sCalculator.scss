@@ -215,9 +215,11 @@
 						font-size: rem(9);
 					}
 					a {
-						&:not(:hover) {
+						color: $white;
+						text-decoration: underline;
+						&:hover {
+							text-decoration: none;
 							color: $white;
-							text-decoration: underline;
 						}
 					}
 				}
