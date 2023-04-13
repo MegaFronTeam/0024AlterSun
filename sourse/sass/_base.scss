@@ -138,6 +138,38 @@ body {
 			margin-bottom: rem(150);
 		}
 	}
+	&--before {
+		position: relative;
+		overflow: visible;
+		&::before {
+			content: "";
+			position: absolute;
+			pointer-events: none;
+			width: 100vw;
+			height: rem(1588);
+			left: calc(-1 * (100vw - 100%) / 2);
+			background-color: rgba(209, 196, 174, 0.4);
+			z-index: -1;
+		}
+	}
+	&--after {
+		position: relative;
+		overflow: visible;
+		&::after {
+			content: "";
+			position: absolute;
+			left: calc(-1 * (100vw - 100%) / 2);
+			top: rem(1588);
+			width: 100vw;
+			height: rem(2418);
+			pointer-events: none;
+			background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1920' height='2419' viewBox='0 0 1920 2419' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 0H1920V1472.88L0 2418.5V0Z' fill='url(%23paint0_linear_2471_2000)' fill-opacity='0.6'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_2471_2000' x1='-24' y1='1923' x2='4279.5' y2='701' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23F4EEE4'/%3e%3cstop offset='1' stop-color='%23FBF8F4' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			background-position: top;
+			z-index: -3;
+		}
+	}
 }
 
 .section-title {
@@ -817,11 +849,11 @@ h4 {
 .gradient-border {
 	--border-width: 2px;
 	--border-radius: 7px;
-	--color-1: #A48B63;
-	--color-2: #D9BC8D;
+	--color-1: #a48b63;
+	--color-2: #d9bc8d;
 	color: $secondary;
 	position: relative;
-	background: linear-gradient(141.69deg, #A48B63 0%, #D9BC8D 100%), linear-gradient(141.69deg, #A48B63 0%, #D9BC8D 100%);
+	background: linear-gradient(141.69deg, #a48b63 0%, #d9bc8d 100%), linear-gradient(141.69deg, #a48b63 0%, #d9bc8d 100%);
 	background-position: var(--border-radius) 0, var(--border-radius) 100%;
 	background-repeat: no-repeat;
 	background-size: calc(100% - var(--border-radius) - var(--border-radius)) var(--border-width);
