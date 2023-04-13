@@ -298,11 +298,11 @@
 			// 	color: $secondary;
 			// }
 		}
-		.form-control {
-			@include media-breakpoint-up(lg) {
-				border: none;
-			}
-		}
+		// .form-control {
+		// 	@include media-breakpoint-up(lg) {
+		// 		border: none;
+		// 	}
+		// }
 		&__subtitle {
 			text-align: center;
 			font-weight: 600;
