@@ -221,7 +221,7 @@ mixin tr(key, value)
 
 mixin collectionItem()
 	+b.collectionItem(href="#")
-		h4 Коллекция Eco Dacron
+		h4 Коллекция <br> Eco Dacron
 		if block
 			block
 		else
@@ -233,13 +233,15 @@ mixin collectionItem()
 					+tr(`Ширина рулона`, `1,5&nbsp;м`)
 					+tr(`Длина рулона`, `60&nbsp;м`)
 		+e.img-wrap
-			+img('img/collectionItem-1.jpg')
+			+img('img/collectionItem-1.jpg', 'bg')
 		+e.price-wrap
 			table
 				tr
-					td 1&nbsp;п.м (меньше рулона)
+					td 1&nbsp;п.м 
+						span (меньше рулона)
 					td 16&nbsp;&euro;
 				tr
-					td 1&nbsp;п.м (кратно рулону)
+					td 1&nbsp;п.м 
+						span (кратно рулону)
 					td 14&nbsp;&euro;
 		

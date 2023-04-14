@@ -1,14 +1,37 @@
 // start .sFabrics
 .sFabrics {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
-	
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+	// --sPT: ;
+	--sPB: #{rem(44)};
+	// --sTPB: ;
+	.container {
+		& > p {
+			font-weight: 400;
+			font-size: rem(12);
+			line-height: 115%;
+			text-align: center;
+			color: rgba($color: $dark, $alpha: 0.7);
+			margin-top: var(--sTPB);
+			margin-bottom: 0;
+		}
+	}
+	&__row {
+		--bs-gutter-y: #{rem(20)};
+		@include media-breakpoint-up(md) {
+			--bs-gutter-y: var(--bs-gutter-x);
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sFabrics
