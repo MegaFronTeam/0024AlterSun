@@ -244,4 +244,16 @@ mixin collectionItem()
 					td 1&nbsp;п.м 
 						span (кратно рулону)
 					td 14&nbsp;&euro;
-		
+
+mixin colorItem(img)
+	+b.colorItem(href="#")&attributes(attributes)
+		+e.sample
+			if img
+				+img('img/collectionItem-1.jpg', 'bg')
+		+e.caption
+			b
+				span RAL 1000 
+				span green beige
+			span CMYK 10 10 50 10 
+			span RGB 204 197 143
+

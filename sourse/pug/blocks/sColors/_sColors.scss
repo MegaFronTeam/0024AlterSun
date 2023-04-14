@@ -1,14 +1,87 @@
 // start .sColors
 .sColors {
-		// --sPT: ;
-		// --sPB: ;
-		// --sTPB: ;
+	--sPT: 0;
+	--sPB: var(--sTPB);
+	// --sTPB: ;
+	&__row {
+		--bs-gutter-x: #{rem(16)};
+		--bs-gutter-y: var(--bs-gutter-x);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(24)};
+		}
+		// @include media-breakpoint-up(xl) {
+		// 	--bs-gutter-x: #{rem(32)};
+		// }
+	}
+	&__col {
+		width: calc(100% / 2);
+		@media (min-width: 500px) {
+			width: calc(100% / 3);
+		}
+		@include media-breakpoint-up(md) {
+			width: calc(100% / 4);
+		}
+		@include media-breakpoint-up(lg) {
+			width: calc(100% / 5);
+		}
+		@include media-breakpoint-up(xl) {
+			width: calc(100% / 6);
+		}
+		@include media-breakpoint-up(xxl) {
+			width: calc(100% / 7);
+		}
+	}
+	.section-title {
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+		h2 {
+			@extend .h4;
+			@include roww(#{rem(16)}, m);
+			position: relative;
+			color: $black;
+			margin-bottom: 0;
+			display: flex;
+			line-height: 130%;
+			background-color: $white;
+			max-width: rem(1000);
+			// margin-right: calc(var(--bs-gutter-x) * -1);
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+			&::after {
+				content: "";
+				@include a-cent(y);
+				position: absolute;
+				width: 100vw;
+				height: 1px;
+				left: calc(100% + rem(16));
+				background-color: $info;
+				z-index: -1;
+			}
+			img {
+				max-width: em(27);
+				height: auto;
+				// margin-left: rem(16);
+				vertical-align: middle;
+				// margin-right: var(--bs-gutter-x);
+			}
+		}
+	}
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-between(md, xl) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+	@include media-breakpoint-down(xl) {
+	}
 } // end.sColors

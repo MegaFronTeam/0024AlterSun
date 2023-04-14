@@ -1,7 +1,20 @@
 mixin sColors(data)
 	// start sColors
-	+b.sColors.section#sColors&attributes(attributes)
+	+b.SECTION.sColors.section&attributes(attributes)
 		.container
-			.row
-			
+			+b.section-title
+				h2 
+					span Палитра цветов RAL Classic
+					+img('img/svg/sColors-1.svg')
+			+e.row.row
+				- for (var x = 0; x < 7; x++)
+					+e.col.col-auto
+						+colorItem()
+				- for (var x = 0; x < 4; x++)
+					+e.col.col-auto
+						+colorItem('img')
+				- for (var x = 0; x < 3; x++)
+					+e.col.col-auto
+						+colorItem()(style="--bgColor: #AF2F32;")
+
 	// end sColors
