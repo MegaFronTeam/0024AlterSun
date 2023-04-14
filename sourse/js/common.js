@@ -525,6 +525,11 @@ function eventHandler() {
 		slidesPerView: 'auto',
 		slideToClickedSlide: true,
 	});
+	const swiperbreadcrumb = new Swiper('.breadcrumb-slider--js', {
+    slidesPerView: 'auto',
+    freeMode: true,
+    watchOverflow: true,
+  });
 
 	// Прокрутка на верх 
 	$(function () {

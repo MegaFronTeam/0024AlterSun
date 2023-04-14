@@ -105,6 +105,7 @@ body {
 	// height: 100vh;
 	// height: calc(var(--vh, 1vh) * 100);
 	// margin-top: rem(48);
+	margin-top: rem(60);
 	@include media-breakpoint-up(lg) {
 		margin-top: rem(64);
 	}

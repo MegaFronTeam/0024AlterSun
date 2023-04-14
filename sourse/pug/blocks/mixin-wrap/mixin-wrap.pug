@@ -91,6 +91,13 @@ mixin page-head-fixed(data)
 					p!= data.text
 				block
 
+mixin page-head-breadcrumbs(h, ...items)
+	+b.page-head--breadcrumbs
+		.container
+			+breadcrumb('Главная',...items)
+			if h
+				h1!= h
+
 mixin categoryMenu()
 		+b.category-menu.dropdown
 			+e.btn.dropdown__btn
@@ -206,3 +213,33 @@ mixin schedule(t)
 	+b.schedule&attributes(attributes)
 		span!= t
 		span Пн&ndash;Вс &bull; 9:00&ndash;21:00
+
+mixin tr(key, value)
+	tr
+		td!= key
+		td!= value
+
+mixin collectionItem()
+	+b.collectionItem(href="#")
+		h4 Коллекция Eco Dacron
+		if block
+			block
+		else
+			+b.featuresTable
+				table
+					+tr(`Материал`, `терилен`)
+					+tr(`Плотность`, `280&nbsp;г/м2`)
+					+tr(`Водостойкость`, `400&nbsp;мм вод.ст.`)
+					+tr(`Ширина рулона`, `1,5&nbsp;м`)
+					+tr(`Длина рулона`, `60&nbsp;м`)
+		+e.img-wrap
+			+img('img/collectionItem-1.jpg')
+		+e.price-wrap
+			table
+				tr
+					td 1&nbsp;п.м (меньше рулона)
+					td 16&nbsp;&euro;
+				tr
+					td 1&nbsp;п.м (кратно рулону)
+					td 14&nbsp;&euro;
+		

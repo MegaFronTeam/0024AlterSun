@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+//- include ../blocks/sContent/_sContent.pug
+//- include ../blocks/sContact/_sContact.pug
+//- include ../blocks/sCatalog/_sCatalog.pug
+//- include ../blocks/sPortfolio/_sPortfolio.pug
+//- include ../blocks/sCategories/_sCategories.pug
+include ../blocks/sFabrics/_sFabrics.pug
+//- include ../blocks/sTypical/_sTypical.pug
+//- include ../blocks/sPriceList/_sPriceList.pug
+//- include ../blocks/sReviews/_sReviews.pug
+//- include ../blocks/sStages/_sStages.pug
+//- include ../blocks/sAbout/_sAbout.pug
+//- include ../blocks/sAdvantages/_sAdvantages.pug
+//- include ../blocks/sAccordion/_sAccordion.pug
+//- include ../blocks/sCertificates/_sCertificates.pug
+//- include ../blocks/sSpecifications/_sSpecifications.pug 
+
+block variables
+	- let  mainPage= null
+	- let  bg= null
+
+block title
+	- let  title= 'Ткани'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+		+topLine()
+	+page-head-breadcrumbs(`Ткани`, `Ткани`)
+	+sFabrics().pt-0
+	+footer()
+	+scrollToTop()
+
+
+
+
