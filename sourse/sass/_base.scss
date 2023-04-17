@@ -824,20 +824,20 @@ h4 {
 }
 
 .main-page {
-	@include media-breakpoint-down(lg) {
-		.top-nav {
-			background-color: transparent;
-			&.fixed {
-				background-color: #fff;
-				.toggle-menu-mobile {
-					--color: #{$secondary};
-				}
-			}
-		}
-		.toggle-menu-mobile {
-			--color: #fff;
-		}
-	}
+	// @include media-breakpoint-down(lg) {
+	// 	.top-nav {
+	// 		background-color: transparent;
+	// 		&.fixed {
+	// 			background-color: #fff;
+	// 			.toggle-menu-mobile {
+	// 				--color: #{$secondary};
+	// 			}
+	// 		}
+	// 	}
+	// 	.toggle-menu-mobile {
+	// 		--color: #fff;
+	// 	}
+	// }
 	// .logo {
 
 	// &:not(:hover) {
