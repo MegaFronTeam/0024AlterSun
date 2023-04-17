@@ -2,7 +2,9 @@
 1. <https://megafronteam.github.io/0024AlterSun/public>
 2. <https://megafronteam.github.io/0024AlterSun/public/07-fabrics.html>
 3. <https://megafronteam.github.io/0024AlterSun/public/08-colors.html>
-4.  <https://megafronteam.github.io/0024AlterSun/public/00-modal.html>
+4. <https://megafronteam.github.io/0024AlterSun/public/09-motors.html>
+5. <https://megafronteam.github.io/0024AlterSun/public/10-additional-options.html>
+6. <https://megafronteam.github.io/0024AlterSun/public/00-modal.html>
 
 <!-- 3. <https://megafronteam.github.io/0024AlterSun/public/05-thanks.html>
 4. <https://megafronteam.github.io/0024AlterSun/public/index-2.html>

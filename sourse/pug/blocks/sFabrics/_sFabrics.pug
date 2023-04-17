@@ -1,11 +1,18 @@
-mixin sFabrics(data)
+mixin sFabrics(title, note)
 	// start sFabrics
-	+b.sFabrics.section#sFabrics&attributes(attributes)
+	+b.sFabrics.section&attributes(attributes)
 		.container
-			+e.row.row
-				- for (var x = 0; x < 4; x++)
-					.col-md-6.col-lg-4.col-xl-3
-						+collectionItem()
-			p *цвета на&nbsp;экране вашего устройства могут отличаться от&nbsp;оригинальных образцов тканей и&nbsp;выкрасок
+			if title
+				+b.section-title.text-center
+					h2!= title
+			if block
+				block
+			else
+				+e.row.row
+					- for (var x = 0; x < 4; x++)
+						.col-md-6.col-lg-4.col-xl-3
+							+collectionItem()
+			if note
+				p *цвета на&nbsp;экране вашего устройства могут отличаться от&nbsp;оригинальных образцов тканей и&nbsp;выкрасок
 
 	// end sFabrics

@@ -6,7 +6,7 @@ extends layout/main.pug
 //- include ../blocks/sCatalog/_sCatalog.pug
 //- include ../blocks/sPortfolio/_sPortfolio.pug
 //- include ../blocks/sCategories/_sCategories.pug
-include ../blocks/sFabrics/_sFabrics.pug
+include ../blocks/sColors/_sColors.pug
 //- include ../blocks/sTypical/_sTypical.pug
 //- include ../blocks/sPriceList/_sPriceList.pug
 //- include ../blocks/sReviews/_sReviews.pug
@@ -22,7 +22,7 @@ block variables
 	- let  bg= null
 
 block title
-	- let  title= 'Ткани'
+	- let  title= 'Двигатели, пульты и кнопки'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -30,22 +30,12 @@ block pagecontent
 		+top-nav()
 		+topLine()
 	+page-head-breadcrumbs(title, title)
-	+sFabrics('', 'note')
-	+sFabrics('Тесьма', 'note')
-		+e.slider--js.swiper
-			.swiper-wrapper
-				- for (var x = 0; x < 30; x++)
-					+e.slide.swiper-slide
-						+sFabricsItem(`1`, `5033`)
-
+	//- +sColors()
+	//- +sColors()
+	//- +sColors().mb-5
 	+footer()
 	+scrollToTop()
 
-
-mixin sFabricsItem(img, text)
-	+b.sFabricsItem(href="#")
-		+img(`img/sFabrics-${img}.jpg`, 'bg')
-		span!= text
 
 
 
