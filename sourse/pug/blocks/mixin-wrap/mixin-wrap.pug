@@ -257,3 +257,9 @@ mixin colorItem(img)
 			span CMYK 10 10 50 10 
 			span RGB 204 197 143
 
+mixin sFabricsItem(img, text)
+	+b.sFabricsItem(href="#")&attributes(attributes)
+		if img
+			+img(`img/sFabrics-${img}.jpg`, 'bg')
+		span!= text
+

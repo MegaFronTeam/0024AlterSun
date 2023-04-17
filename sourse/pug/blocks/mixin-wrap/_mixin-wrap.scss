@@ -898,3 +898,30 @@
 		}
 	}
 }
+
+.sFabricsItem {
+	@include block(180, 87);
+	position: relative;
+	display: block;
+	height: 100%;
+	background-color: var(--bgColor, $light);
+	&:hover {
+		box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.09);
+	}
+	img {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	span {
+		position: absolute;
+		display: inline-block;
+		bottom: 0;
+		left: 0;
+		color: $white;
+		background-color: #86755b;
+		font-weight: 500;
+		font-size: rem(12);
+		padding: rem(3) rem(11);
+	}
+}

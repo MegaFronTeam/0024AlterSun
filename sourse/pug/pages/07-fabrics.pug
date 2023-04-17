@@ -31,21 +31,46 @@ block pagecontent
 		+topLine()
 	+page-head-breadcrumbs(title, title)
 	+sFabrics('', 'note')
-	+sFabrics('Тесьма', 'note')
+	+sFabrics('Тесьма', '')
 		+e.slider--js.swiper
 			.swiper-wrapper
 				- for (var x = 0; x < 30; x++)
 					+e.slide.swiper-slide
 						+sFabricsItem(`1`, `5033`)
 
+	+sFabrics('Коллекция Masacril', 'note')
+		+e.slider--js.swiper
+			.swiper-wrapper
+				- for (var x = 0; x < 30; x++)
+					+e.slide.swiper-slide
+						+sFabricsItem(`2`, `2042 Blanco`)
+
+	+sFabrics('Соответсвие ткани Sauleda Системе Ral и&nbsp;Pantone*', 'note')
+		+e.slider--js.swiper
+			.swiper-wrapper
+				- for (var x = 0; x < 30; x++)
+					+e.slide.swiper-slide
+						+sFabricsItem(``, `2042 Blanco`)(style="--bgColor: #AF2F32")
+
+	+sFabrics('Eco Dacron', 'note')
+		+b.featuresTable
+			table
+				+tr(`Материал`, `терилен`)
+				+tr(`Плотность`, `280&nbsp;г/м2`)
+				+tr(`Водостойкость`, `400&nbsp;мм вод.ст.`)
+				+tr(`Ширина рулона`, `1,5&nbsp;м`)
+				+tr(`Длина рулона`, `60&nbsp;м`)
+		+e.slider--js.swiper
+			.swiper-wrapper
+				- for (var x = 0; x < 30; x++)
+					+e.slide.swiper-slide
+						+sFabricsItem(`3`, `D1351 Capitoline`)
+
 	+footer()
 	+scrollToTop()
 
 
-mixin sFabricsItem(img, text)
-	+b.sFabricsItem(href="#")
-		+img(`img/sFabrics-${img}.jpg`, 'bg')
-		span!= text
+
 
 
 

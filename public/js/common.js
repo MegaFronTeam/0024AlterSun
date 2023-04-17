@@ -534,24 +534,27 @@ function eventHandler() {
 	const sFabricsParents = document.querySelectorAll('.sFabrics');
 	for (const sFabricsParent of sFabricsParents) {
 		const sFabricsSlider = new Swiper((sFabricsParent.querySelector('.sFabrics__slider--js')), {
-			// slidesPerView: 5,
 			slidesPerView: 'auto',
-			// slidesPerView: 'auto',
-			spaceBetween: 0,
-			// freeMode: true,
-			// loopFillGroupWithBlank: true,
-			// touchRatio: 0.2,
-			slideToClickedSlide: true,
-			// freeModeMomentum: true,
+			spaceBetween: 16,
+			watchOverflow: true,
+			observer: true,
+			observeSlideChildren: true,
+			freeMode: {
+				enabled: true,
+				sticky: true,
+				momentumVelocityRatio: 0.3
+			},
 			grid: {
         rows: 3,
       },
 			lazy: {
 				loadPrevNext: true,
 			},
-			watchOverflow: true,
-			// loop: true,
-			
+			breakpoints: {
+				768: {
+					spaceBetween: 24
+				}
+			}
 		});
 	};
 
