@@ -844,6 +844,7 @@
 }
 
 .featuresTable {
+	margin-bottom: calc(var(--sTPB) * 0.6);
 	table {
 		font-weight: 400;
 		font-size: rem(12);
@@ -854,7 +855,7 @@
 			vertical-align: bottom;
 			&:first-child {
 				padding-left: 0;
-				width: rem(105);
+				// width: rem(105);
 				vertical-align: top;
 				color: rgba($color: $dark, $alpha: 0.7);
 			}

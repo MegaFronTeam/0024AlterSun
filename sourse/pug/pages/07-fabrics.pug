@@ -53,13 +53,7 @@ block pagecontent
 						+sFabricsItem(``, `2042 Blanco`)(style="--bgColor: #AF2F32")
 
 	+sFabrics('Eco Dacron', 'note')
-		+b.featuresTable
-			table
-				+tr(`Материал`, `терилен`)
-				+tr(`Плотность`, `280&nbsp;г/м2`)
-				+tr(`Водостойкость`, `400&nbsp;мм вод.ст.`)
-				+tr(`Ширина рулона`, `1,5&nbsp;м`)
-				+tr(`Длина рулона`, `60&nbsp;м`)
+		+featuresTable
 		+e.slider--js.swiper
 			.swiper-wrapper
 				- for (var x = 0; x < 30; x++)

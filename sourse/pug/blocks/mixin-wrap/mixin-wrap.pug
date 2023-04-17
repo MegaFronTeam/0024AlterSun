@@ -219,19 +219,22 @@ mixin tr(key, value)
 		td!= key
 		td!= value
 
+mixin featuresTable()
+	+b.featuresTable&attributes(attributes)
+		table
+			+tr(`Материал`, `терилен`)
+			+tr(`Плотность`, `280&nbsp;г/м2`)
+			+tr(`Водостойкость`, `400&nbsp;мм вод.ст.`)
+			+tr(`Ширина рулона`, `1,5&nbsp;м`)
+			+tr(`Длина рулона`, `60&nbsp;м`)
+
 mixin collectionItem()
 	+b.collectionItem(href="#")
 		h4 Коллекция <br> Eco Dacron
 		if block
 			block
 		else
-			+b.featuresTable
-				table
-					+tr(`Материал`, `терилен`)
-					+tr(`Плотность`, `280&nbsp;г/м2`)
-					+tr(`Водостойкость`, `400&nbsp;мм вод.ст.`)
-					+tr(`Ширина рулона`, `1,5&nbsp;м`)
-					+tr(`Длина рулона`, `60&nbsp;м`)
+			+featuresTable().mb-0
 		+e.img-wrap
 			+img('img/collectionItem-1.jpg', 'bg')
 		+e.price-wrap
