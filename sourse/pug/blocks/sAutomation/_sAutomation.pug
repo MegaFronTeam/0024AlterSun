@@ -1,0 +1,76 @@
+mixin sAutomation(isNotDefault)
+	// start sAutomation
+	+b.SECTION.sAutomation.section#sAutomation&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Автоматика LT
+			+e.row.row
+				mixin item(count)
+					+e.item(href='#')
+						+e.inner-row.row
+							.col-sm
+								+img(`img/sAutomation-img-1.png`)
+							.col-sm-auto
+								+e.content
+									h6 SOLIRIS UNO + SOLIRIS SENSOR
+									p Комплект солнце-ветровой автоматики, 230V (блок управления + датчик солце \ ветер)
+							.col-12
+								+e.wrapper
+									+e.wrap
+										if count
+											+e.count до 2<br>маркиз
+										p TR-U-230, реле, 230V
+										span 1822293
+										+e.price 16 €
+									+e.wrap
+										if count
+											+e.count до 2<br>маркиз
+										p TR-U-230, реле, 230V
+										span 1822293
+										+e.price 16 €
+					mixin item2(count)
+						+e.item--2(href='#')
+							+e.inner-row.row
+								.col-sm
+									+img(`img/sAutomation-img-2.png`)
+								.col-sm.d-flex.flex-column
+									+e.content
+										h6 SOLIRIS UNO + SOLIRIS SENSOR
+										p Комплект солнце-ветровой автоматики, 230V (блок управления + датчик солце \ ветер)
+									+e.wrapper(class=(count ? '--count' : ''))
+										+e.wrap
+											if count
+												+e.count до 2 маркиз
+											p TR-U-230, реле, 230V
+											span 1822293
+											+e.price 16 €
+										+e.wrap
+											if count
+												+e.count до 2 маркиз
+											p TR-U-230, реле, 230V
+											span 1822293
+											+e.price 16 €
+				.col-md-6.col-xl-4
+					+item()
+				.col-md-6.col-xl-4
+					+item(true)
+				.col-md-6.col-xl-4
+					+item()
+				if isNotDefault 
+					.col-12.p-0.m-0
+					- for (var x = 0; x < 7; x++)
+						+e.col.col-auto
+							+colorItem()
+					.col-12.p-0.m-0
+				else
+					.col-md-6.col-xl-4
+						+item()
+					.col-md-6.col-xl-4
+						+item(true)
+					.col-md-6.col-xl-4
+						+item()
+				.col-lg-6
+					+item2()
+				.col-lg-6
+					+item2(true)
+	// end sAutomation

@@ -1,14 +1,14 @@
 .pixel-perfect {
-	top: -4895px;
+	top: 0;
 	display: block;
 	@include a-cent(x);
 	pointer-events: none;
 	z-index: 1000;
 	overflow: hidden;
 	width: 100%;
-	// height: 22394px;
 	background-position: center 0;
 	opacity: 0;
+	// height: 22394px;
 	// opacity: 0.7;
 }
 

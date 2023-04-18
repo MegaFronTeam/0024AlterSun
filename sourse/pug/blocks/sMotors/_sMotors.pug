@@ -1,0 +1,85 @@
+mixin sMotors(data)
+	// start sMotors
+	+b.SECTION.sMotors.section#sMotors&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Моторы LT
+			+e.row.row
+				.col-xl
+					+e.wrap
+						+e.inner-wrap
+							-for (let i = 0; i < 2; i++)
+								+e.head
+									.row
+										.col.fw-semi-bold 
+											h6 Двигатели для маркиз открытого типа
+										.col-auto 
+											p NHK (аварийное ручное управление)
+								table
+									thead 
+										tr 
+											th
+											th Наименование
+											th без NHK
+											th c NHK
+									tbody
+										-for (let i = 0; i < 6; i++)
+											tr
+												td SIENNA
+												td LT 50 Ceres 10/17
+												td 207
+												td 207
+				.col-xl-auto
+					+e.img-wrap
+						+img('img/sMotors-img-1.png')
+						+img('img/sMotors-img-2.png')
+	// end sMotors
+mixin sMotors2(data)
+	// start sMotors2
+	+b.SECTION.sMotors--2.section#sMotors&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Шелкография
+			+e.row.row
+				.col-xl-6
+					+e.wrap
+						+e.inner-wrap
+							+e.head 
+								h6 Стоимость
+							table
+								thead 
+									tr 
+										th Наименование
+										th Наименование
+								tbody
+									-for (let i = 0; i < 6; i++)
+										tr
+											td SIENNA
+											td LT 50 Ceres 10/17
+							+e.head 
+								h6 Стоимость
+							table
+								thead 
+									tr 
+										th Наименование
+										th Наименование
+								tbodyf
+									tr
+										td SIENNA
+										td LT 50 Ceres 10/17
+				.col-xl-6
+					+e.content
+						h6 На лепестке корзиной маркизы
+						+img('img/sMotors-img-3.png')
+					+e.content
+						h6 На ламбрекене
+						+img('img/sMotors-img-4.png')
+				.col-xl-6
+					+e.content
+						h6 На лепестке корзиной маркизы
+						+img('img/sMotors-img-3.png')
+				.col-xl-6
+					+e.content
+						h6 На лепестке корзиной маркизы
+						+img('img/sMotors-img-3.png')
+	// end sMotors2

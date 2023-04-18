@@ -1,21 +1,9 @@
 extends layout/main.pug
 
 
-//- include ../blocks/sContent/_sContent.pug
-//- include ../blocks/sContact/_sContact.pug
-//- include ../blocks/sCatalog/_sCatalog.pug
-//- include ../blocks/sPortfolio/_sPortfolio.pug
-//- include ../blocks/sCategories/_sCategories.pug
-include ../blocks/sColors/_sColors.pug
-//- include ../blocks/sTypical/_sTypical.pug
-//- include ../blocks/sPriceList/_sPriceList.pug
-//- include ../blocks/sReviews/_sReviews.pug
-//- include ../blocks/sStages/_sStages.pug
-//- include ../blocks/sAbout/_sAbout.pug
-//- include ../blocks/sAdvantages/_sAdvantages.pug
-//- include ../blocks/sAccordion/_sAccordion.pug
-//- include ../blocks/sCertificates/_sCertificates.pug
-//- include ../blocks/sSpecifications/_sSpecifications.pug 
+include ../blocks/sMotors/_sMotors.pug
+include ../blocks/sAutomation/_sAutomation.pug
+include ../blocks/sScheme/_sScheme.pug
 
 block variables
 	- let  mainPage= null
@@ -30,9 +18,9 @@ block pagecontent
 		+top-nav()
 		+topLine()
 	+page-head-breadcrumbs(title, title)
-	//- +sColors()
-	//- +sColors()
-	//- +sColors().mb-5
+	+sMotors2
+	+sAutomation(true)
+	+sScheme
 	+footer()
 	+scrollToTop()
 

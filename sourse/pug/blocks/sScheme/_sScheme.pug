@@ -1,0 +1,27 @@
+mixin sScheme(data)
+	// start sScheme
+	+b.SECTION.sScheme.section#sScheme&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Схемы подключения автоматики RTS
+			mixin item(text, title, img='sScheme-img-1.png')
+				+e.item
+					if title
+						h6 SOLIRIS UNO + SOLIRIS SENSOR
+					else
+						span Вариант 1
+					+img(`img/${img}`)
+					if text
+						p Комплект солнце-ветровой автоматики, 230V (блок управления + датчик солце \ ветер)
+			+e.row.row
+				.col-lg-6
+					+item
+					+item(true)
+				.col-lg-6
+					+item
+					+item(true)
+				.col-lg-6
+					+item(true, true, 'sScheme-img-2.jpg')
+				.col-lg-6
+					+item(true, true, 'sScheme-img-2.jpg')
+	// end sScheme

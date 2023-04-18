@@ -1,0 +1,168 @@
+// start .sAutomation
+.sAutomation {
+	--sPT: #{rem(22)};
+	--sPB: #{rem(22)};
+	// --sTPB: ;
+	&__row {
+		--bs-gutter-x: #{rem(32)};
+		--bs-gutter-y: #{rem(35)};
+	}
+	.section-title {
+		display: flex;
+		align-items: center;
+		position: relative;
+		overflow: hidden;
+		margin-bottom: rem(22);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(44);
+		}
+		h2 {
+			@include rfs('24px');
+			position: relative;
+			color: $black;
+			margin-bottom: 0;
+			display: flex;
+			line-height: 130%;
+			background-color: $white;
+			max-width: rem(1000);
+			// margin-right: calc(var(--bs-gutter-x) * -1);
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+			}
+			&::after {
+				content: "";
+				@include a-cent(y);
+				position: absolute;
+				width: 100vw;
+				height: 1px;
+				left: calc(100% + rem(16));
+				background-color: $info;
+				z-index: -1;
+			}
+		}
+	}
+	&__item {
+		height: calc(100% + var(--bs-gutter-y));
+		img {
+			width: 100%;
+			max-width: rem(145);
+		}
+		&--2 {
+			.sAutomation {
+				&__content {
+					margin-bottom: auto;
+					max-width: none;
+				}
+				&__wrapper {
+					&--count {
+						box-shadow: none;
+						.sAutomation__wrap {
+							margin-top: 25px;
+							position: relative;
+							box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.09);
+						}
+						.sAutomation__count {
+							position: absolute;
+							top: -25.600px;
+							left: 0;
+							padding: rem(8.5) rem(10);
+						}
+					}
+				}
+			}
+			img {
+				max-width: 281px;
+			}
+		}
+	}
+	&__inner-row {
+		--bs-gutter-x: #{rem(30)};
+		--bs-gutter-y: #{rem(30)};
+
+		height: 100%;
+	}
+	&__content {
+		max-width: rem(209);
+		h6 {
+			font-size: rem(18);
+			line-height: 1.3;
+			color: #000;
+			margin-bottom: rem(16);
+		}
+		p {
+			font-size: rem(12);
+			margin-bottom: rem(12);
+			color: $dark;
+		}
+	}
+	&__wrapper {
+		box-shadow: 0px 10px 13px rgba(0, 0, 0, 0.09);
+	}
+	&__wrap {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		flex-wrap: wrap;
+		@include media-breakpoint-down(md) {
+		}
+		p {
+			margin-bottom: 0;
+			font-size: rem(12);
+			line-height: 1.5;
+			color: #000;
+			margin-right: auto;
+			padding-left: rem(17);
+			@include media-breakpoint-down(md) {
+				// width: 100%;
+				order: -1;
+				padding: rem(14) rem(17);
+			}
+		}
+		span {
+			font-size: rem(12);
+			line-height: 1.5;
+			padding: rem(14) rem(9);
+			background-color: $light;
+			color: #000;
+		}
+	}
+	&__price {
+		font-size: rem(14);
+		font-weight: 700;
+		line-height: 1.5;
+		padding: 0 rem(16);
+		color: #000;
+	}
+	&__count {
+		font-size: rem(12);
+		color: #fff;
+		padding: rem(10);
+		background-color: #86755B;
+		line-height: 1.15;
+	}
+	&__col {
+		width: calc(100% / 2);
+		@media (min-width: 500px) {
+			width: calc(100% / 3);
+		}
+		@include media-breakpoint-up(md) {
+			width: calc(100% / 4);
+		}
+		@include media-breakpoint-up(lg) {
+			width: calc(100% / 5);
+		}
+		@include media-breakpoint-up(xl) {
+			width: calc(100% / 6);
+		}
+		@include media-breakpoint-up(xxl) {
+			width: calc(100% / 7);
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sAutomation
