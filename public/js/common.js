@@ -557,6 +557,32 @@ function eventHandler() {
 			}
 		});
 	};
+	const sCollectionParents = document.querySelectorAll('.sCollection__item');
+	for (const sCollectionParent of sCollectionParents) {
+		const sCollectionSlider = new Swiper((sCollectionParent.querySelector('.sCollection__slider--js')), {
+			slidesPerView: 'auto',
+			spaceBetween: 16,
+			watchOverflow: true,
+			observer: true,
+			observeSlideChildren: true,
+			freeMode: {
+				enabled: true,
+				sticky: true,
+				momentumVelocityRatio: 0.3
+			},
+			grid: {
+        rows: 2,
+      },
+			lazy: {
+				loadPrevNext: true,
+			},
+			breakpoints: {
+				768: {
+					spaceBetween: 24
+				}
+			}
+		});
+	};
 
 	// Прокрутка на верх 
 	$(function () {

@@ -7,6 +7,7 @@ extends layout/main.pug
 //- include ../blocks/sPortfolio/_sPortfolio.pug
 //- include ../blocks/sCategories/_sCategories.pug
 include ../blocks/sFabrics/_sFabrics.pug
+include ../blocks/sCollection/_sCollection.pug
 //- include ../blocks/sTypical/_sTypical.pug
 //- include ../blocks/sPriceList/_sPriceList.pug
 //- include ../blocks/sReviews/_sReviews.pug
@@ -38,19 +39,21 @@ block pagecontent
 					+e.slide.swiper-slide
 						+sFabricsItem(`1`, `5033`)
 
-	+sFabrics('Коллекция Masacril', 'note')
+	+sFabrics('Коллекция Masacril').pb-0
 		+e.slider--js.swiper
 			.swiper-wrapper
 				- for (var x = 0; x < 30; x++)
 					+e.slide.swiper-slide
 						+sFabricsItem(`2`, `2042 Blanco`)
 
+	+sCollection()
+
 	+sFabrics('Соответсвие ткани Sauleda Системе Ral и&nbsp;Pantone*', 'note')
 		+e.slider--js.swiper
 			.swiper-wrapper
 				- for (var x = 0; x < 30; x++)
 					+e.slide.swiper-slide
-						+sFabricsItem(``, `2042 Blanco`)(style="--bgColor: #AF2F32")
+						+sFabricsItem(``, `2065 Teja 3013 1805 C`)(style="--bgColor: #AF2F32")
 
 	+sFabrics('Eco Dacron', 'note')
 		+featuresTable

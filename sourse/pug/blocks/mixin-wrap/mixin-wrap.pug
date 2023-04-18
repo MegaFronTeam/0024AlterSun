@@ -228,25 +228,29 @@ mixin featuresTable()
 			+tr(`Ширина рулона`, `1,5&nbsp;м`)
 			+tr(`Длина рулона`, `60&nbsp;м`)
 
-mixin collectionItem()
+mixin collectionItem(h, price)
 	+b.collectionItem(href="#")
-		h4 Коллекция <br> Eco Dacron
-		if block
-			block
-		else
-			+featuresTable().mb-0
+		+e.head
+			h4!= h
+			//- h4 Коллекция <br> Eco Dacron
+			//- h4 Коллекция <br> «Sea star»
+			if block
+				block
+			else
+				+featuresTable().mb-0
 		+e.img-wrap
 			+img('img/collectionItem-1.jpg', 'bg')
-		+e.price-wrap
-			table
-				tr
-					td 1&nbsp;п.м 
-						span (меньше рулона)
-					td 16&nbsp;&euro;
-				tr
-					td 1&nbsp;п.м 
-						span (кратно рулону)
-					td 14&nbsp;&euro;
+		if price
+			+e.price-wrap
+				table
+					tr
+						td 1&nbsp;п.м 
+							span (меньше рулона)
+						td 16&nbsp;&euro;
+					tr
+						td 1&nbsp;п.м 
+							span (кратно рулону)
+						td 14&nbsp;&euro;
 
 mixin colorItem(img)
 	+b.colorItem(href="#")&attributes(attributes)

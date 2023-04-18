@@ -1,0 +1,33 @@
+mixin sCollection(note)
+	// start sCollection
+	+b.sCollection.section&attributes(attributes)
+		.container
+			+e.item
+				+e.row.row
+					.col-lg-9.col-xl-6
+						+collectionItem(`Коллекция <br> «Sea star»`)
+					.col-xl-6
+						+e.slider--js.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 30; x++)
+									+e.slide.swiper-slide
+										+sFabricsItem(`1`, `5033`)
+			+e.item
+				+e.row.row
+					.col-lg-9.col-xl-6
+						+collectionItem(`Коллекция <br> «Sea star»`)
+							+b.featuresTable.mb-0
+								table
+									+tr(`Материал`, `плетёная основа <br> из&nbsp;полиэстра, <br> покрытие&nbsp;&mdash; ПВХ`)
+									+tr(`Класс огнестойкости`, `М1`)
+									+tr(`Ширина рулона`, `2,6&nbsp;м`)
+									+tr(`Длина рулона`, `40&nbsp;м`)
+					.col-xl-6
+						+e.slider--js.swiper
+							.swiper-wrapper
+								- for (var x = 0; x < 30; x++)
+									+e.slide.swiper-slide
+										+sFabricsItem(`1`, `5033`)
+			p *цвета на&nbsp;экране вашего устройства могут отличаться от&nbsp;оригинальных образцов тканей и&nbsp;выкрасок
+
+	// end sCollection
